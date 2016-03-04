@@ -27,7 +27,7 @@ hardcoded pathnames used in this).
 Also, if I were to ever reorganize my github stuff, this repo is more likely to
 be renamed/combined-with-other-small-scripts-in-one-repo than e.g.
 [esceval](https://github.com/mentalisttraceur/esceval) or
-[poll](https://github.com/mentalisttraceur/poll) to get moved/renamed.
+[poll](https://github.com/mentalisttraceur/poll).
 
 In order to make it work with the minimum disruption of how "iptables" is
 packaged in the Maemo 5 community repos, I just moved `/usr/sbin/xtables-multi`
