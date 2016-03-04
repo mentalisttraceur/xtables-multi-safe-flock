@@ -6,7 +6,7 @@ succeeding and the other failing to commit its changes with a misleading error
 message.
 
 Worse, an `iptables-restore` running in parallel with an `iptables -I` command
-was prone to adding a **wrong** rule (something deep in the implementation must
+was prone to adding a _**wrong**_ rule (something deep in the implementation must
 have corrupted the rule data mid-write due to the other write, I guess).
 
 As I understand it, iptables-restore is supposed to _not_ do this, but rather
