@@ -12,7 +12,7 @@ have corrupted the rule data mid-write due to the other write, I guess).
 As I understand it, iptables-restore is supposed to _not_ do this, but rather
 the opposite: it's supposed to lock the netfilter tables until it can commit
 the changes. Since that wasn't working, I wrapped xtables-multi (the command
-which new-ish ip*tables-* are just symlinks to) with a script to manually use a
+which new-ish `ip*tables-*` are just symlinks to) with a script to manually use a
 lockfile to ensure my iptables commands don't clobber each other, especially on
 boot where they were really prone to doing so.
 
