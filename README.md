@@ -1,3 +1,5 @@
+(Note: the two shell scripts are identical except for the comments.)
+
 This is a quickly thrown together script that I needed to work around the fact
 that the ip[6]tables found in the Maemo 5 community repos for Nokia N900 phones
 seem to be prone to race conditions. I found that two processes running
