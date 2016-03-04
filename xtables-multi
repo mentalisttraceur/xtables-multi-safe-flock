@@ -1,0 +1,34 @@
+#!/bin/sh
+arg0=${0##*/}
+for name in "$arg0" "$1"
+do
+ case $name in
+ ip6tables | ip6tables-restore | ip6tables-save | main6 | restore6 | save6)
+  lockname=ip6tables
+  break
+ ;;
+ iptables | iptables-restore | iptables-save | main4 | restore4 | save4)
+  lockname=iptables
+  break
+ ;;
+ iptables-xml | xml)
+  exec /usr/sbin/xtables-multi.real $arg0 "$@"
+ esac
+ case $arg0 in
+ '')
+  exec /usr/sbin/xtables-multi.real "$@"
+ esac
+ arg0=
+done
+for arg
+do
+ case $arg in
+ -h | --help)
+  exec /usr/sbin/xtables-multi.real $arg0 "$@"
+ esac
+done
+case `id -u` in
+0)
+ exec 3>/run/"$lockname".lock && flock 3 || exit $?
+esac
+exec /usr/sbin/xtables-multi.real $arg0 "$@"
