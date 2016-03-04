@@ -46,4 +46,6 @@ example of this is my [fkdep](https://github/mentalisttraceur/fkdep) script,
 where I forgo radical portability for just "stock N900" portability). And of
 course, I used `flock(1)` for the locking mechanism, which isn't portable
 outside of Linux, last I checked (at least in that you can't rely on it being
-on base/stock install of a non-Linux OS).
+on base/stock install of a non-Linux OS, and as I understand it on some systems
+`flock(2)` is implemented in terms of the process-associated, `fcntl(2)`-based,
+record locking semantics).
