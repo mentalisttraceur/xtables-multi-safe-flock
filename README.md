@@ -34,7 +34,7 @@ packaged in the Maemo 5 community repos, I just moved `/usr/sbin/xtables-multi`
 to `/usr/sbin/xtables-multi.real`. That path is hardcoded, as is the assumption
 that the script itself is named xtables-multi, (presumably) displacing the
 original. If you need to adopt this for something else, e.g. Tomato USB router
-firmware with `*tables-*` which don't symlink to xtables-multi, or just to use
+firmware with `*tables-*` which don't symlink to `xtables-multi`, or just to use
 different path, it should be trivial to adapt it manually. Also, all my N900s
 have a ramdisk at `/run` (in line with modern Debian, like `/var/run` used to
 be: I recommend adjusting your N900 so that both paths point to the same place,
